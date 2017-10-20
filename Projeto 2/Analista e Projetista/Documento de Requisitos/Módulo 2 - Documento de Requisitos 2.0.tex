@@ -1,0 +1,153 @@
+\documentclass[12pt,a4paper,onecolumn,titlepage]{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+
+\begin{document} %Inicio do documento
+
+\begin{titlepage} %Capa
+	
+	\vfill
+	\begin{center}
+	
+		{\large \textbf{Faculdade de Ciências e Tecnologia\\Universidade Estadual Paulista\\``Júlio de Mesquita Filho''}} \\[3cm]
+		{\large \textbf{Jean Carlo Massami Yamada\\Willyan Kin S Tubone}}\\[4cm]
+		{\Large Documento de Requisitos}\\
+		{\Large Módulo 2}\\[4cm]
+
+
+	\vfill
+	\vspace{1.5cm}
+	
+	\large \textbf{Presidente Prudente\\}
+	\large \textbf{Outubro - 2017}
+	
+	\end{center}
+	
+\end{titlepage}
+%Fim da capa
+\newpage
+
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\newpage
+%Conteúdo do documento
+\section{Introdução}
+\label{sect:intro}
+
+\subsection{Propósito do documento de requisitos}
+
+O documento tem como objetivo descrever as perspectivas do produto e suas
+respectivas funcionalidades, bem como todos os recursos de hardware e software necessários para a elaboração deste, contendo todas as especificações de
+requisitos necessários. Esta ferramenta visa prover a emissão de boletos e a administração dos boletos gerados.
+
+\subsection{Escopo do produto}
+
+Esta ferramenta busca oferecer um ambiente de forma a fornecer o serviço de geração de boleto e de administração dos boletos gerados, de forma que o administrador possa ter o controle dos boletos gerados.
+
+\subsection{Definições, siglas e abreviaturas}
+
+Segue abaixo, a lista de siglas e abreviaturas utilizadas neste documento:
+\begin{itemize}
+\item RF: Requisito Funcional
+\item RNF: Requisito não Funcional
+\end{itemize}
+
+\subsection{Visão geral do documento}
+
+Neste documento serão abordados alguns assuntos como divididos a seguir:
+na Seção 2 é apresentado a descrição geral do produto, assim como suas
+funcionalidades e respectivas restrições bem como o ambiente de execução.
+A seguir na Seção 3 é descrito o conjunto de todos os requisitos do sistema
+e do projeto.
+
+\section{Descrição geral}
+\label{sect:descricao}
+
+\subsection{Perspectiva do Produto}
+
+O sistema utiliza um servidor que trabalha diretamente com um banco de dados relacional, o qual armazena os usuários e os dados referentes ao boleto.
+
+
+\subsection{Funções do Produto}
+O sistema deve gerar boletos bancários para o Cliente de acordo com o banco de sua escolha. Ao usuário administrador deve-se permitir gerir os boletos gerados, dar baixa em boletos pagos e reemitir boletos vencidos.
+\subsection{Características do Usuário}
+O usuário do tipo Cliente tem como interesse
+solicitar a geração de boletos de um banco de sua escolha. O usuário do tipo
+Administrador tem como característica o interesse em gerir os boletos gerados.
+
+
+\subsection{Restrições}
+
+O sistema será desenvolvido para plataforma web, desta forma sendo acessível tanto por desktop ou por dispositivos móveis, sendo que este último tem maiores restrições de hardware, porém a execução da plataforma deve ocorrer
+normalmente em ambas as plataformas. Será desenvolvido em HTML 5, CSS 3 e JavaScript, logo quaisquer navegadores que não fornecerem suporte completo a estas tecnologias não serão suportados pela ferramenta.\\
+
+\subsection{Suposições e Dependências}
+
+Este software não possui nenhuma limitação adicional ao que citado na sessão 2.4 quanto ao sistema operativo ou hardware .
+
+\section{Requisitos Específicos}
+\label{sect:requisitos}
+
+\subsection{Requisitos Funcionais}
+
+\begin{description} 
+
+
+\item	RF 1.1 - O sistema deve permitir o usuário cliente realizar um pagamento de qualquer valor através de geração de boleto bancário. (E)
+\item	RF 1.1.1 - O sistema deve permitir o usuário cliente escolher o banco para a geração do boleto. (E)
+\item   RF 1.1.2 - O sistema deve informar para o usuário cliente a situação referente ao boleto gerado. (E)
+\item	RF 1.1.3 - O sistema deve permitir o usuário cliente emitir a segunda via do boleto. (E)
+\item   RF 1.2 - O sistema deve permitir ao usuário Administrador dar baixa em boletos. (E)
+\item   RF 1.3 - O sistema deve exibir para o usuário Administrador os boletos gerados por um usuário específico. (E)
+\item   RF 1.4 - O sistema deve exibir todos os boletos gerados para o usuário Administrador. (E)
+\item   RF 1.5 - O sistema deve armazenar os boletos gerados e seus respectivos dados, como valor,
+usuário, código de barras, data e hora da emissão, data de vencimento, numero do documento, situação do boleto, item, a ser pago através do boleto. (O)
+\item   RF 1.6 - O sistema deve calcular e exibir a soma dos pagamentos realizados através dos boletos para o usuário administrador. (E)
+\item   RF 1.7 - O sistema deve exibir para o usuário administrador as informações relacionadas a um boleto gerado pelo sistema. (E)
+\item   RF 1.8 - O sistema deve permitir o usuário administrador alterar dados referentes a boletos gerados pelo sistema. (E)
+\item   RF 1.9 - O sistema deve permitir o usuário administrador excluir dados referentes a boletos gerados pelo sistema. (E)
+\end{description}
+
+\subsection{Requisitos Não Funcionais}
+
+
+\begin{description}
+\item RNF 1.1 - O sistema será desenvolvido para plataforma web utilizando as  linguagens HTML, CSS e Javascript, utilizando requisições AJAX. Para
+		a parte de servidor será utilizada a linguagem PHP e para a persistência
+		será utilizado o banco de dados relacional MySQL.
+
+
+\end{description}
+
+%\subsection{Requisitos Desempenho}
+%\subsection{Requisitos Lógicos de Banco de Dados}
+%\subsection{Restrições de Projeto}
+%\subsection{Atributo do Sistema de Software}
+
+
+
+%\subsection{Organização}
+%\section{Informações de Apoio}
+%\label{apoio}
+  
+  
+%\subsection{Índice}
+%\label{indice}
+
+\newpage
+
+\renewcommand{\contentsname}{Índice}
+
+
+%\section{Apêndices}
+%\label{sect:apendices}
+
+%Fim do conteúdo do documento
+%referencias - estilos: http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html
+%\bibliographystyle{acm}
+%\bibliography{referencias}
+
+\end{document} %Fim do documento

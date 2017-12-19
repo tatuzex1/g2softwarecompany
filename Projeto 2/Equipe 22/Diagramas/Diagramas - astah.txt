@@ -1,0 +1,5 @@
+1 - Diagrama de Sequência
+2 - Diagrama de Classe
+3 - Diagrama de Caso de Uso
+4 - Modelo Conceitual
+5 - Diagrama de Interação (Colaboração)
